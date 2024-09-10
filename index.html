@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIS Web</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+
+    <nav>
+        <div class="nav-left">
+            <img src="logo.png" alt="Logo" class="logo">
+            <span class="site-name">GPOliwangi</span>
+        </div>
+        <div class="nav-right">
+            <a href="#" class="nav-link">Dashboard</a>
+            <a href="#" class="nav-link">History</a>
+        </div>
+    </nav>
+
+    <h1>Monitoring Rute Kapal Nelayan</h1>
+    
+    <!-- Maps -->
+    <div id="map"></div>
+
+    <!-- Card La & Lo -->
+    <div class="cards">
+        <div class="card" id="latitude-card">
+            <h2>Latitude</h2>
+            <p id="latitude-value"></p>
+        </div>
+        <div class="card" id="longitude-card">
+            <h2>Longitude</h2>
+            <p id="longitude-value"></p>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
