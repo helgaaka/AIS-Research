@@ -8,7 +8,7 @@ class TrackingController extends Controller
 {
     public function getData()
     {
-        // Api Dumy Untuk 2 alat
+        // posisi static (Dermaga)
         $data = [
             [
                 'id' => 1,
@@ -24,5 +24,31 @@ class TrackingController extends Controller
             ]
         ];
         return response()->json($data);
+    }
+
+    // Fungsi untuk mendapatkan riwayat lokasi
+public function getTrackingHistory()
+{
+    // Mengambil data riwayat dari database
+    return Coordinate::orderBy('created_at', 'asc')->get(); // ambil nilai ascending
+    
+}
+
+public function store(Request $request)
+    {
+        // fungsi store ke database
+        $validatedData = $request->validate([
+            'device_id' => 'required|integer',
+            'latitude' => 'required|numeric|between:-90,90',
+            'longitude' => 'required|numeric|between:-180,180',
+        ]);
+
+        $tracking = Coordinate::create([
+            'device_id' => $validatedData['device_id'],
+            'latitude' => $validatedData['latitude'],
+            'longitude' => $validatedData['longitude'],
+        ]);
+
+        return response()->json(['message' => 'Data saved successfully', 'data' => $tracking], 201);
     }
 }
