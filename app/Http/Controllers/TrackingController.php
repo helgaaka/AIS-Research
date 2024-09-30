@@ -21,6 +21,12 @@ class TrackingController extends Controller
                 'device' => 'Alat 2',
                 'latitude' => '-6.300000',
                 'longitude' => '110.900000',
+            ],
+            [
+                'id' => 3,
+                'device' => 'Alat 3',
+                'latitude' => '-5.400000',
+                'longitude' => '108.900000',
             ]
         ];
         return response()->json($data);

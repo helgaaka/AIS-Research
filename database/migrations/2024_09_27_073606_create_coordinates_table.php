@@ -11,8 +11,8 @@ return new class extends Migration
         Schema::create('coordinates', function (Blueprint $table) {
             $table->id();
             $table->string('device_id'); 
-            $table->decimal('latitude', 10, 8); 
-            $table->decimal('longitude', 11, 8); 
+            $table->double('latitude', 10, 8); 
+            $table->double('longitude', 11, 8); 
             $table->timestamps(); 
         });
     }
