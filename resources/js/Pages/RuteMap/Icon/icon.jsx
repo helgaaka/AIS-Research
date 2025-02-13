@@ -15,3 +15,9 @@ export const cargoShipIcon = new L.Icon({
     iconAnchor: [19, 38],
     popupAnchor: [0, -38],
 });
+
+// Ikon marker
+export const dotShipIcon = new L.Icon({
+    iconUrl: '/dot.png',
+    iconSize: [25, 25],    
+});

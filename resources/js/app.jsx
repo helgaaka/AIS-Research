@@ -1,7 +1,7 @@
-import './bootstrap';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import React from 'react';
 import { render } from 'react-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './bootstrap';
 import Tracking from './Pages/RuteMap/MainRuteMap'; // Import Tracking page
 import Halaman1 from './Pages/Halaman1/halaman1'; // Import halaman1 page
 import Halaman2 from './Pages/Halaman2/halaman2'; // Import halaman2 page

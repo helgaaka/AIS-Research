@@ -23,3 +23,23 @@ v2.2 : Perapian kode, tampilan halaman dan route halaman
     file yang ditambahkan kode halaman = app, web
 3.  pemisahan kode agar lebih rapi, terstruktur, dan mudah dimanage.
 ==============================================================
+
+v3.1 : Penambahan fungsi saat mouse di hover pada rute kapal (history pergerakan) maka akan muncul koordinatnya
+==============================================================
+dengan logika menggabungkan polyline dan marker sehingga setiap saat ada data baru masuk lalu saat mouse di hover data history pergerakan akan muncul
+==============================================================
+
+v3.2 : Penyempurnaan fungsi saat mouse di hover pada rute kapal (history pergerakan) maka akan muncul koordinatnya
+==============================================================
+dengan logika menambahkan marker pada setiap saat ada data baru masuk lalu saat mouse di hover data history pergerakan akan muncul
+==============================================================
+
+v3.3 : Penyempurnaan fungsi icon kapal diklik aka akan muncul koordinatnya (history pergerakan)
+==============================================================
+koordinat/rute pergerakan muncul saat icon kapal di klik, icon kapal merupakan posisi kapal saat ini, fungsi zoom (saat membuka map maka langsung mengarah ke lokasi yang di set, misal penyebrangan bwi dan bali)
+==============================================================
+
+v3.4 : Penyempurnaan fungsi icon kapal diklik aka akan muncul koordinatnya (history pergerakan)
+==============================================================
+koordinat/rute pergerakan muncul saat icon kapal di klik, icon kapal merupakan posisi kapal saat ini menghilang bila tidak di klik/pilih, fungsi zoom (saat membuka map maka langsung mengarah ke lokasi yang di set, misal penyebrangan bwi dan bali)
+==============================================================
