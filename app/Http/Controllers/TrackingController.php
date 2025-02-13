@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\Models\Coordinate;
 class TrackingController extends Controller
 {
     public function getData()
@@ -13,32 +13,44 @@ class TrackingController extends Controller
             [
                 'id' => 1,
                 'device' => 'Alat 1',
-                'latitude' => '-6.200000',
+                'latitude' => '-5.400000',
                 'longitude' => '106.816666',
             ],
             [
                 'id' => 2,
                 'device' => 'Alat 2',
-                'latitude' => '-6.300000',
-                'longitude' => '110.900000',
+                'latitude' => '-5.400000',
+                'longitude' => '108.900000',
             ],
             [
                 'id' => 3,
                 'device' => 'Alat 3',
                 'latitude' => '-5.400000',
-                'longitude' => '108.900000',
+                'longitude' => '110.900000',
             ]
         ];
         return response()->json($data);
     }
-
-    // Fungsi untuk mendapatkan riwayat lokasi
+    
+// Fungsi untuk mendapatkan riwayat lokasi
 public function getTrackingHistory()
 {
     // Mengambil data riwayat dari database
-    return Coordinate::orderBy('created_at', 'asc')->get(); // ambil nilai ascending
-    
+    $coordinates = Coordinate::orderBy('created_at', 'asc')->get();
+
+    // Mengelompokkan data berdasarkan device_id
+    $groupedData = [];
+    foreach ($coordinates as $coordinate) {
+        $groupedData[$coordinate->device_id][] = [
+            'latitude' => $coordinate->latitude,
+            'longitude' => $coordinate->longitude,
+            'created_at' => $coordinate->created_at,
+        ];
+    }
+
+    return response()->json($groupedData);
 }
+
 
 public function store(Request $request)
     {
