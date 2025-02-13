@@ -26,7 +26,7 @@ v2.2 : Perapian kode, tampilan halaman dan route halaman
 
 v3.1 : Penambahan fungsi saat mouse di hover pada rute kapal (history pergerakan) maka akan muncul koordinatnya
 ==============================================================
-dengan logika menggabungkan polyline dan marker sehingga setiap saat ada data baru masuk lalu saat mouse di hover data history pergerakan akan muncul
+dengans logika menggabungkan polyline dan marker sehingga setiap saat ada data baru masuk lalu saat mouse di hover data history pergerakan akan muncul
 ==============================================================
 
 v3.2 : Penyempurnaan fungsi saat mouse di hover pada rute kapal (history pergerakan) maka akan muncul koordinatnya
